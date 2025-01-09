@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+</head>
+<body>
+    <h1>Loading...</h1>
+    <p>Please wait while we process your request.</p>
+
+    <script>
+        // Automatically submit the form to trigger the actual processing
+        window.onload = function() {
+            document.getElementById("processingForm").submit();
+        };
+    </script>
+
+    <form id="processingForm" action='/results' method="POST">
+        <input type="hidden" name="filename" value="{{ filename }}">
+        <input type="hidden" name="text" value="{{ text }}">
+    </form>
+</body>
+</html>

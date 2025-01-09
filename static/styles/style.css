@@ -1,0 +1,240 @@
+.main-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+
+
+.container {
+    /* background-color: rgb(90, 119, 245); */
+    margin-top: 10em;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+    width: 200%;
+    max-width: 550px;
+    box-sizing: border-box;
+    color: white;
+    z-index: 100;
+    /* display: block; */
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+    resize: none;
+    height: 200px;
+    margin-bottom: 1em;
+    width: 110%;
+}
+
+#browse-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#browse-button:hover {
+    background-color: #0056b3;
+}
+
+button {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-top: 70px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    textarea {
+        font-size: 12px;
+    }
+
+    button[type="submit"], #browse-button {
+        font-size: 14px;
+    }
+}
+
+#audio-file{
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+#audio-file:hover {
+    background-color: #3e454d;
+}
+#file-list{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+  .dragdrop{
+    border-radius: 30px;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+    width: 500px;
+    height: 200px;
+    border: 4px dashed blue;
+    background-color: white;
+  }
+  .dragdrop p{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+    line-height: 170px;
+    color: black;
+    font-family: Arial;
+  }
+  .dragdrop input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+  }
+  .dragdrop button{
+    margin: 0;
+    color: #fff;
+    background: #16a085;
+    border: none;
+    width: 508px;
+    height: 35px;
+    margin-top: -20px;
+    margin-left: -4px;
+    border-radius: 4px;
+    border-bottom: 4px solid #117A60;
+    transition: all .2s ease;
+    outline: none;
+  }
+  .dragdrop button:hover{
+    background: #149174;
+      color: #0C5645;
+  }
+  .dragdrop button:active{
+    border:0;
+  }
+  
+  
+  

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesys Automated Bot</title>
+    <!-- <link rel="stylesheet" href="./styles.css"> Link to your CSS file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/styles/index.css">
+    <style>
+body {
+  background: radial-gradient(farthest-side, #182158 0%, #030414 100%) no-repeat fixed 0 0;
+  margin: 0;
+}
+.hidden-checkbox {
+  display: none;
+}
+
+.checkbox-label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-label:hover {
+  background-color: #0056b3;
+}
+
+.checkbox-label:active {
+  background-color: #004080;
+}
+
+.hidden-checkbox:checked + .checkbox-label {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.hidden-checkbox:checked + .checkbox-label:hover {
+  background-color: #218838;
+}
+
+h1 {
+  color: #fff;
+  font: 10vh/1.2 sans-serif;
+}
+#canvas {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 400px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  font-size: 2vw;
+  border-radius: 9em;
+  padding: 0.5em 1.5em;
+  border: none;
+  background: rgba(255,255,255,0.8);
+}
+#audio_record-icon{
+  width: 100px;
+  /* border-radius: 50%; */
+}
+.stopbut{
+  padding-top: 100px;
+}
+#stopButton{
+  position: absolute;
+  top: 900px;
+  display: none;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+  <button id="startButton" onclick="start()">Start</button>
+  <div class="stopbut">
+  <button id="stopButton">Stop</button>
+  </div>
+  <!-- Add your JavaScript here -->
+  <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
+    
+    <!-- <input type="checkbox" name="audio_record-icon" id="audio_record-icon"> -->
+    
+    <!-- start() -->
+    
+    <!-- Add your JavaScript here -->
+    <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <!-- <script src="../static/index.js"></script> -->
+
+</body>
+</html>
