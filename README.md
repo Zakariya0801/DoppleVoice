@@ -3,7 +3,7 @@
 
 This is an ML model for voice duplication called DoppleVoice
 To run the application, make a virtual environment using python:
-~ python -m venv dopplevoice
+*python -m venv dopplevoice*
 
 **On Windows, run:**
 *dopplevoice\Scripts\activate*
